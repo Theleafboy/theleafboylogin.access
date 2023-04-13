@@ -1,1 +1,80 @@
-open my thiny
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login | The Leaf Boy</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-top: 50px;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			background-color: #f9f9f9;
+		}
+		form input[type=text], form input[type=password] {
+			padding: 10px;
+			margin-bottom: 10px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+			background-color: #fff;
+		}
+		form input[type=submit] {
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+			background-color: #4CAF50;
+			color: #fff;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		form input[type=submit]:hover {
+			background-color: #3e8e41;
+		}
+		#error {
+			color: red;
+			margin-top: 10px;
+		}
+	</style>
+	<script>
+		function login() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			if (username === "dhruv.mel.au@gmail.com" && password === "Ican&Fly68") {
+				window.location.href = "page2.html";
+			} else {
+				document.getElementById("error").innerHTML = "Incorrect username or password";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Welcome to the Login Page</h1>
+	<form onsubmit="login(); return false;">
+		<input type="email" id="email" placeholder="email">
+		<input type="password" id="password" placeholder="Password">
+		<input type="submit" value="Login">
+	</form>
+	<div id="error"></div>
+	<div class="cc_css_reboot cc_dialog dark simple en" id="cc_dialog" role="dialog" aria-modal="true" aria-labelledby="cc_dialog" aria-describedby="cc_dialog"><div class="cc_dialog_inner"><p class="cc_dialog_headline" id="cc_dialog_headline">We use cookies</p><div class="cc_dialog_text_inner"><p class="cc_dialog_text" id="cc_dialog_text">We use Cookies to Block Adds in our website, give best exprience and faster connection<br></p></div><div class="cc_b_inner"> 
+		<button id="myButton">Accept</button>
+
+  <script>
+    var button = document.getElementById("myButton");
+    button.addEventListener("click", function() {
+      window.location.href = "accept.html";
+    });
+  </script>
+		<button class="cc_b_cp" role="button">Change my preferences</button></div></div></div>
+</body>
+</html>
